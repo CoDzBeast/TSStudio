@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/',  // Set base path to root for GitHub Pages
+  base: '/TSStudio/',  // Set base path to match repository name for GitHub Pages
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
