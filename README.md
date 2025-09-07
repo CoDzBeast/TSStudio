@@ -48,3 +48,7 @@ To verify your API keys are working:
 3. Select a stylist and appointment type
 4. Fill in the form and submit
 5. If you see a success message, your API keys are configured correctly
+
+## Deployment
+
+This site is automatically deployed to GitHub Pages. After pushing changes to the `main` branch, the site will be available at https://codzbeast.github.io/TSStudio/
