@@ -22,4 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Bolt IDE specific files
+.bolt/
+
+# Environment variables
 .env
