@@ -37,7 +37,7 @@ const Header: React.FC = () => {
               <img 
                 src="/src/assets/images/logo.png" 
                 alt="T & S Studio Logo" 
-                className="h-28 md:h-32 object-contain"
+                className="h-12 md:h-16 object-contain"
               />
             </button>
           </div>
