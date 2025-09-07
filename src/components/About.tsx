@@ -1,5 +1,7 @@
 import React from 'react';
 import { Heart, Award, Users, Instagram } from 'lucide-react';
+import cover1 from '../assets/images/about/cover1.png';
+import cover2 from '../assets/images/about/cover2.jpg';
 
 const About: React.FC = () => {
   return (
@@ -56,7 +58,7 @@ const About: React.FC = () => {
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-rose-200 to-rose-300 rounded-full flex items-center justify-center">
                   <img
-                    src="../assets/images/about/cover1.png"
+                    src={cover1}
                     alt="Founder T"
                     className="w-full h-full object-contain rounded-full"
                   />
@@ -80,7 +82,7 @@ const About: React.FC = () => {
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-rose-200 to-rose-300 rounded-full flex items-center justify-center">
                   <img
-                    src="../assets/images/about/cover2.jpg"
+                    src={cover2}
                     alt="Founder S"
                     className="w-full h-full object-contain rounded-full"
                   />

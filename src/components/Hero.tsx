@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
+import homepageImage from '../assets/images/hero/homepage.jpg';
 
 const Hero: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -47,7 +48,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-rose-200 to-rose-300 rounded-2xl shadow-2xl flex items-center justify-center">
               <img
-                src="../assets/images/hero/homepage.jpg"
+                src={homepageImage}
                 alt="Elegant hair styling at T & S Studio"
                 className="w-full h-full object-cover rounded-2xl"
               />

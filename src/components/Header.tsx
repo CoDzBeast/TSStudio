@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import logo from '../assets/images/logo.png';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +36,7 @@ const Header: React.FC = () => {
               className="hover:opacity-80 transition-opacity duration-300"
             >
               <img 
-                src="../assets/images/logo.png" 
+                src={logo} 
                 alt="T & S Studio Logo" 
                 className="h-12 md:h-16 object-contain"
               />

@@ -1,44 +1,55 @@
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
+// Import all gallery images
+import image1 from '../assets/images/gallery/image1.png';
+import image2 from '../assets/images/gallery/image2.png';
+import image3 from '../assets/images/gallery/image3.png';
+import image4 from '../assets/images/gallery/image4.png';
+import image5 from '../assets/images/gallery/image5.png';
+import image6 from '../assets/images/gallery/image6.jpg';
+import image7 from '../assets/images/gallery/image7.jpg';
+import image8 from '../assets/images/gallery/image8.jpg';
+import image9 from '../assets/images/gallery/image9.jpg';
+
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const galleryImages = [
     {
-      src: '../assets/images/gallery/image1.png',
+      src: image1,
       alt: 'Elegant updo styling',
     },
     {
-      src: '../assets/images/gallery/image2.png',
+      src: image2,
       alt: 'Beautiful balayage color work',
     },
     {
-      src: '../assets/images/gallery/image3.png',
+      src: image3,
       alt: 'Modern precision cut',
     },
     {
-      src: '../assets/images/gallery/image4.png',
+      src: image4,
       alt: 'Before and after transformation',
     },
     {
-      src: '../assets/images/gallery/image5.png',
+      src: image5,
       alt: 'Stunning highlight work',
     },
     {
-      src: '../assets/images/gallery/image6.jpg',
+      src: image6,
       alt: 'Stylish layered cut',
     },
     {
-      src: '../assets/images/gallery/image7.jpg',
+      src: image7,
       alt: 'Wedding hair styling',
     },
     {
-      src: '../assets/images/gallery/image8.jpg',
+      src: image8,
       alt: 'Color transformation',
     },
     {
-      src: '../assets/images/gallery/image9.jpg',
+      src: image9,
       alt: 'Textured bob cut',
     },
   ];
