@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-rose-200 to-rose-300 rounded-2xl shadow-2xl flex items-center justify-center">
               <img
-                src="/src/assets/images/hero/homepage.jpg"
+                src="../assets/images/hero/homepage.jpg"
                 alt="Elegant hair styling at T & S Studio"
                 className="w-full h-full object-cover rounded-2xl"
               />

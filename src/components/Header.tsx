@@ -35,7 +35,7 @@ const Header: React.FC = () => {
               className="hover:opacity-80 transition-opacity duration-300"
             >
               <img 
-                src="/src/assets/images/logo.png" 
+                src="../assets/images/logo.png" 
                 alt="T & S Studio Logo" 
                 className="h-12 md:h-16 object-contain"
               />

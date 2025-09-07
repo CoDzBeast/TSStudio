@@ -6,39 +6,39 @@ const Gallery: React.FC = () => {
 
   const galleryImages = [
     {
-      src: '/src/assets/images/gallery/image1.png',
+      src: '../assets/images/gallery/image1.png',
       alt: 'Elegant updo styling',
     },
     {
-      src: '/src/assets/images/gallery/image2.png',
+      src: '../assets/images/gallery/image2.png',
       alt: 'Beautiful balayage color work',
     },
     {
-      src: '/src/assets/images/gallery/image3.png',
+      src: '../assets/images/gallery/image3.png',
       alt: 'Modern precision cut',
     },
     {
-      src: '/src/assets/images/gallery/image4.png',
+      src: '../assets/images/gallery/image4.png',
       alt: 'Before and after transformation',
     },
     {
-      src: '/src/assets/images/gallery/image5.png',
+      src: '../assets/images/gallery/image5.png',
       alt: 'Stunning highlight work',
     },
     {
-      src: '/src/assets/images/gallery/image6.jpg',
+      src: '../assets/images/gallery/image6.jpg',
       alt: 'Stylish layered cut',
     },
     {
-      src: '/src/assets/images/gallery/image7.jpg',
+      src: '../assets/images/gallery/image7.jpg',
       alt: 'Wedding hair styling',
     },
     {
-      src: '/src/assets/images/gallery/image8.jpg',
+      src: '../assets/images/gallery/image8.jpg',
       alt: 'Color transformation',
     },
     {
-      src: '/src/assets/images/gallery/image9.jpg',
+      src: '../assets/images/gallery/image9.jpg',
       alt: 'Textured bob cut',
     },
   ];

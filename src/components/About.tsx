@@ -56,7 +56,7 @@ const About: React.FC = () => {
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-rose-200 to-rose-300 rounded-full flex items-center justify-center">
                   <img
-                    src="/src/assets/images/about/cover1.png"
+                    src="../assets/images/about/cover1.png"
                     alt="Founder T"
                     className="w-full h-full object-contain rounded-full"
                   />
@@ -80,7 +80,7 @@ const About: React.FC = () => {
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-rose-200 to-rose-300 rounded-full flex items-center justify-center">
                   <img
-                    src="/src/assets/images/about/cover2.jpg"
+                    src="../assets/images/about/cover2.jpg"
                     alt="Founder S"
                     className="w-full h-full object-contain rounded-full"
                   />
