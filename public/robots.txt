@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tsstudio.com/sitemap.xml
+
+User-agent: *
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/

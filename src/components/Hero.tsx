@@ -21,7 +21,9 @@ const Hero: React.FC = () => {
               <span className="block text-rose-400">T & S Studio</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed">
-              Where our team of artists empowers you with the charm and confidence you deserve
+              Premier women-owned hair salon in Rocklin, CA. Expert balayage, precision cuts, 
+              color services & styling for the modern woman. Experience artistry that empowers 
+              you with charm and confidence.
             </p>
             <p className="text-base text-gray-600 mb-10 italic">
               "Where Artistry Meets Beauty"
@@ -30,6 +32,7 @@ const Hero: React.FC = () => {
               <button
                 onClick={() => scrollToSection('contact')}
                 className="bg-gray-800 text-cream px-8 py-4 rounded-full hover:bg-gray-700 transition-all duration-300 font-medium flex items-center justify-center space-x-2 group"
+                aria-label="Book Your Hair Transformation Appointment"
               >
                 <Calendar className="w-5 h-5" />
                 <span>Book Your Transformation</span>
@@ -38,6 +41,7 @@ const Hero: React.FC = () => {
               <button
                 onClick={() => scrollToSection('services')}
                 className="border-2 border-gray-800 text-gray-800 px-8 py-4 rounded-full hover:bg-gray-800 hover:text-cream transition-all duration-300 font-medium"
+                aria-label="Explore Our Premium Hair Services"
               >
                 Explore Our Services
               </button>
@@ -49,7 +53,7 @@ const Hero: React.FC = () => {
             <div className="aspect-square bg-gradient-to-br from-rose-200 to-rose-300 rounded-2xl shadow-2xl flex items-center justify-center">
               <img
                 src={homepageImage}
-                alt="Elegant hair styling at T & S Studio"
+                alt="Elegant hair styling at T & S Studio - Premier women-owned salon in Rocklin, CA"
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>

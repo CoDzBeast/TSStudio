@@ -34,10 +34,11 @@ const Header: React.FC = () => {
             <button
               onClick={() => scrollToSection('hero')}
               className="hover:opacity-80 transition-opacity duration-300"
+              aria-label="T & S Studio - Premier Hair Salon"
             >
               <img 
                 src={logo} 
-                alt="T & S Studio Logo" 
+                alt="T & S Studio Logo - Premier Women-Owned Hair Salon in Rocklin, CA" 
                 className="h-12 md:h-16 object-contain"
               />
             </button>
@@ -48,36 +49,42 @@ const Header: React.FC = () => {
             <button
               onClick={() => scrollToSection('hero')}
               className="text-gray-700 hover:text-rose-400 transition-colors duration-300 font-medium"
+              aria-label="Home - T & S Studio"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
               className="text-gray-700 hover:text-rose-400 transition-colors duration-300 font-medium"
+              aria-label="About Our Salon"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-rose-400 transition-colors duration-300 font-medium"
+              aria-label="Hair Services - Cuts, Color, Balayage"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
               className="text-gray-700 hover:text-rose-400 transition-colors duration-300 font-medium"
+              aria-label="Hair Gallery - Before and After Photos"
             >
               Gallery
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-rose-400 transition-colors duration-300 font-medium"
+              aria-label="Contact Us - Book Appointment"
             >
               Contact
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
               className="bg-gray-800 text-cream px-6 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 font-medium flex items-center space-x-2"
+              aria-label="Book Appointment Now"
             >
               <Phone className="w-4 h-4" />
               <span>Book Now</span>
@@ -89,6 +96,8 @@ const Header: React.FC = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-rose-400 transition-colors duration-300"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -103,36 +112,42 @@ const Header: React.FC = () => {
             <button
               onClick={() => scrollToSection('hero')}
               className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rose-400 transition-colors duration-300 w-full text-left"
+              aria-label="Home - T & S Studio"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
               className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rose-400 transition-colors duration-300 w-full text-left"
+              aria-label="About Our Salon"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
               className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rose-400 transition-colors duration-300 w-full text-left"
+              aria-label="Hair Services - Cuts, Color, Balayage"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
               className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rose-400 transition-colors duration-300 w-full text-left"
+              aria-label="Hair Gallery - Before and After Photos"
             >
               Gallery
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rose-400 transition-colors duration-300 w-full text-left"
+              aria-label="Contact Us - Book Appointment"
             >
               Contact
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
               className="mx-3 mt-4 bg-gray-800 text-cream px-6 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 font-medium flex items-center space-x-2"
+              aria-label="Book Appointment Now"
             >
               <Phone className="w-4 h-4" />
               <span>Book Now</span>

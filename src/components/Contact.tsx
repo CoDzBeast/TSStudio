@@ -7,11 +7,11 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-20 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif font-bold text-gray-800 mb-6">Visit Our Studio</h2>
+          <h2 className="text-4xl font-serif font-bold text-gray-800 mb-6">Visit Our Rocklin Salon</h2>
           <div className="w-24 h-1 bg-rose-400 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            Ready to experience the T & S Studio difference? Contact us to schedule your 
-            consultation and transformation.
+            Ready to experience the T & S Studio difference? Contact our premier women-owned 
+            hair salon in Rocklin, CA to schedule your consultation and transformation.
           </p>
         </div>
 
@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
           
           {/* Map and Contact Information */}
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-3xl font-serif font-bold text-gray-800 mb-4">Find Us</h3>
+            <h3 className="text-3xl font-serif font-bold text-gray-800 mb-4">Find Our Rocklin Salon</h3>
             <div className="aspect-video rounded-lg overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.242412788155!2d-121.2645122235697!3d38.77981887666999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b21153b16c463%3A0xad3834778ccf93fe!2sMY%20SALON%20Suite!5e0!3m2!1sen!2sus!4v1725585000000!5m2!1sen!2sus"
@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="MY SALON Suite Location"
+                title="T & S Studio - Premier Hair Salon in Rocklin, CA"
               ></iframe>
             </div>
             

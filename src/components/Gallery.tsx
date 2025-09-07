@@ -18,39 +18,39 @@ const Gallery: React.FC = () => {
   const galleryImages = [
     {
       src: image1,
-      alt: 'Elegant updo styling',
+      alt: 'Elegant updo styling at T & S Studio - Premier women-owned salon in Rocklin, CA',
     },
     {
       src: image2,
-      alt: 'Beautiful balayage color work',
+      alt: 'Beautiful balayage color work by expert stylists in Rocklin, CA',
     },
     {
       src: image3,
-      alt: 'Modern precision cut',
+      alt: 'Modern precision cut for women at T & S Studio hair salon',
     },
     {
       src: image4,
-      alt: 'Before and after transformation',
+      alt: 'Before and after hair transformation at Rocklin salon',
     },
     {
       src: image5,
-      alt: 'Stunning highlight work',
+      alt: 'Stunning highlight work by professional colorists in Rocklin',
     },
     {
       src: image6,
-      alt: 'Stylish layered cut',
+      alt: 'Stylish layered cut for modern women at T & S Studio',
     },
     {
       src: image7,
-      alt: 'Wedding hair styling',
+      alt: 'Wedding hair styling for brides in Rocklin, CA',
     },
     {
       src: image8,
-      alt: 'Color transformation',
+      alt: 'Complete color transformation at premier Rocklin hair salon',
     },
     {
       src: image9,
-      alt: 'Textured bob cut',
+      alt: 'Textured bob cut by expert stylists at T & S Studio',
     },
   ];
 
@@ -79,7 +79,8 @@ const Gallery: React.FC = () => {
           <h2 className="text-4xl font-serif font-bold text-gray-800 mb-6">Our Work Speaks</h2>
           <div className="w-24 h-1 bg-rose-400 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            Explore our portfolio showcasing the artistry and transformations that define T & S Studio.
+            Explore our portfolio showcasing the artistry and transformations that define T & S Studio, 
+            the premier women-owned hair salon in Rocklin, CA.
           </p>
         </div>
 
@@ -90,6 +91,14 @@ const Gallery: React.FC = () => {
               key={index}
               className="aspect-square overflow-hidden rounded-2xl shadow-lg cursor-pointer group"
               onClick={() => openLightbox(index)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  openLightbox(index);
+                }
+              }}
+              aria-label={`View ${image.alt}`}
             >
               <img
                 src={image.src}
@@ -106,7 +115,7 @@ const Gallery: React.FC = () => {
             <div className="relative max-w-4xl max-h-full">
               <img
                 src={galleryImages[selectedImage].src}
-                alt={galleryImages[selectedImage].alt}
+                alt={`${galleryImages[selectedImage].alt} - Full size view`}
                 className="max-w-full max-h-full object-contain rounded-lg"
               />
               
@@ -114,6 +123,7 @@ const Gallery: React.FC = () => {
               <button
                 onClick={closeLightbox}
                 className="absolute top-4 right-4 bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
+                aria-label="Close image viewer"
               >
                 <X className="w-6 h-6 text-white" />
               </button>
@@ -122,12 +132,14 @@ const Gallery: React.FC = () => {
               <button
                 onClick={() => navigateImage('prev')}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
+                aria-label="Previous image"
               >
                 <ChevronLeft className="w-6 h-6 text-white" />
               </button>
               <button
                 onClick={() => navigateImage('next')}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-300"
+                aria-label="Next image"
               >
                 <ChevronRight className="w-6 h-6 text-white" />
               </button>

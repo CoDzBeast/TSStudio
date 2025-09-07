@@ -7,33 +7,33 @@ const Testimonials: React.FC = () => {
   const testimonials = [
     {
       name: 'Sarah Williams',
-      text: 'T & S Studio transformed not just my hair, but my confidence. The attention to detail is incredible and the artists truly understand what works for each individual.',
+      text: 'T & S Studio transformed not just my hair, but my confidence. The attention to detail is incredible and the artists truly understand what works for each individual. Best hair salon in Rocklin, CA!',
       rating: 5,
-      service: 'Balayage & Cut'
+      service: 'Balayage & Precision Cut'
     },
     {
       name: 'Jessica Martinez',
-      text: 'The artists here truly understand what works for each individual. I always leave feeling amazing and receive so many compliments on my hair.',
+      text: 'The artists here truly understand what works for each individual. I always leave feeling amazing and receive so many compliments on my hair. The best women-owned salon in the Rocklin area.',
       rating: 5,
-      service: 'Color Correction'
+      service: 'Color Correction & Styling'
     },
     {
       name: 'Emily Chen',
-      text: 'Professional, welcoming, and incredibly talented. My go-to studio for all my hair needs. The consultation process ensures I always get exactly what I want.',
+      text: 'Professional, welcoming, and incredibly talented. My go-to studio for all my hair needs in Rocklin. The consultation process ensures I always get exactly what I want. Highly recommend their balayage services!',
       rating: 5,
-      service: 'Precision Cut'
+      service: 'Precision Cut & Color'
     },
     {
       name: 'Ashley Davis',
-      text: 'From my wedding day to regular maintenance, T & S Studio has never disappointed. The team is skilled, friendly, and creates such a relaxing atmosphere.',
+      text: 'From my wedding day to regular maintenance, T & S Studio has never disappointed. The team is skilled, friendly, and creates such a relaxing atmosphere. The top-rated salon in Rocklin, CA for bridal styling.',
       rating: 5,
-      service: 'Bridal Styling'
+      service: 'Bridal Styling & Updo'
     },
     {
       name: 'Rachel Thompson',
-      text: 'I have never felt more beautiful after leaving a salon. The transformation was beyond my expectations, and the entire experience was luxurious.',
+      text: 'I have never felt more beautiful after leaving a salon. The transformation was beyond my expectations, and the entire experience was luxurious. Best hair transformation I\'ve had in the Sacramento area.',
       rating: 5,
-      service: 'Full Transformation'
+      service: 'Full Hair Transformation'
     }
   ];
 
@@ -70,7 +70,8 @@ const Testimonials: React.FC = () => {
           <div className="w-24 h-1 bg-rose-400 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
             Don't just take our word for it – hear what our valued clients have to say about 
-            their transformative experiences at T & S Studio.
+            their transformative experiences at T & S Studio, the premier women-owned 
+            hair salon in Rocklin, CA.
           </p>
         </div>
 
@@ -100,12 +101,14 @@ const Testimonials: React.FC = () => {
           <button
             onClick={prevTestimonial}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300"
+            aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6 text-gray-600" />
           </button>
           <button
             onClick={nextTestimonial}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300"
+            aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6 text-gray-600" />
           </button>
@@ -119,6 +122,7 @@ const Testimonials: React.FC = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentTestimonial ? 'bg-rose-400' : 'bg-gray-300'
                 }`}
+                aria-label={`View testimonial ${index + 1}`}
               />
             ))}
           </div>

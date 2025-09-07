@@ -6,37 +6,37 @@ const Services: React.FC = () => {
     {
       icon: Scissors,
       title: 'Precision Cuts',
-      description: 'Tailored to your unique style and lifestyle',
+      description: 'Tailored to your unique style and lifestyle. Our expert stylists in Rocklin, CA provide precision haircuts that complement your face shape and hair type.',
       price: 'Starting at $65'
     },
     {
       icon: Palette,
       title: 'Color Mastery',
-      description: 'From subtle highlights to bold transformations',
+      description: 'From subtle highlights to bold transformations. Our professional color services in Rocklin include full color, root touch-ups, and creative color combinations.',
       price: 'Starting at $95'
     },
     {
       icon: Sparkles,
       title: 'Balayage & Highlights',
-      description: 'Hand-painted dimension and depth',
+      description: 'Hand-painted dimension and depth. Experience the best balayage services in Rocklin, CA for natural-looking, sun-kissed highlights that grow out beautifully.',
       price: 'Starting at $125'
     },
     {
       icon: Calendar,
       title: 'Special Event Styling',
-      description: 'Wedding, prom, and special occasion hair',
+      description: 'Wedding, prom, and special occasion hair. Let our Rocklin salon artists create the perfect hairstyle for your important event.',
       price: 'Starting at $85'
     },
     {
       icon: Droplets,
       title: 'Hair Treatments',
-      description: 'Restore, strengthen, and revitalize',
+      description: 'Restore, strengthen, and revitalize. Our professional hair treatments in Rocklin include deep conditioning, keratin treatments, and damage repair.',
       price: 'Starting at $45'
     },
     {
       icon: MessageCircle,
       title: 'Consultations',
-      description: 'Personalized styling recommendations',
+      description: 'Personalized styling recommendations. Book a complimentary consultation with our expert stylists in Rocklin to discuss your hair goals.',
       price: 'Complimentary'
     }
   ];
@@ -45,11 +45,12 @@ const Services: React.FC = () => {
     <section id="services" className="py-20 bg-gradient-to-br from-rose-100 to-rose-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif font-bold text-gray-800 mb-6">Our Artistry</h2>
+          <h2 className="text-4xl font-serif font-bold text-gray-800 mb-6">Our Premium Hair Services</h2>
           <div className="w-24 h-1 bg-rose-400 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            Discover our comprehensive range of premium hair services, each crafted with 
-            artistic precision and personalized attention.
+            Discover our comprehensive range of premium hair services in Rocklin, CA. 
+            Each service is expertly crafted with artistic precision and personalized attention 
+            by our talented women-owned salon team.
           </p>
         </div>
 

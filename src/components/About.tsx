@@ -16,14 +16,17 @@ const About: React.FC = () => {
           {/* Content */}
           <div className="space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-              T & S Studio is a full-service salon founded by talented women artists who believe in 
-              liberating your body and mind through expert styling. We welcome you to experience our 
-              artistry and the confidence that comes with it.
+              T & S Studio is a premier women-owned full-service salon located in Rocklin, CA. 
+              Founded by talented artists Taylor Winarski and Shantel Bernal, we believe in 
+              liberating your body and mind through expert styling. As one of the top hair salons 
+              in the Rocklin area, we welcome you to experience our artistry and the confidence 
+              that comes with it.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Our passion lies in understanding each client's unique beauty and enhancing it through 
-              personalized treatments. Every visit to our studio is crafted to be a transformative 
-              experience that goes beyond just hair styling.
+              personalized treatments. Every visit to our Rocklin salon is crafted to be a transformative 
+              experience that goes beyond just hair styling. We specialize in balayage, precision cuts, 
+              and color services that make you look and feel your best.
             </p>
 
             {/* Stats */}
@@ -33,7 +36,7 @@ const About: React.FC = () => {
                   <Heart className="w-8 h-8 text-rose-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">100+</h3>
-                <p className="text-gray-600 text-sm">Happy Clients</p>
+                <p className="text-gray-600 text-sm">Happy Clients in Rocklin</p>
               </div>
               <div className="text-center">
                 <div className="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -59,18 +62,19 @@ const About: React.FC = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-rose-200 to-rose-300 rounded-full flex items-center justify-center">
                   <img
                     src={cover1}
-                    alt="Founder T"
+                    alt="Taylor Winarski - Co-Founder of T & S Studio Hair Salon in Rocklin, CA"
                     className="w-full h-full object-contain rounded-full"
                   />
                 </div>
                 <div>
                   <h3 className="text-xl font-serif font-bold text-gray-800">Taylor Winarski</h3>
-                  <p className="text-rose-400 font-medium">Co-Founder</p>
+                  <p className="text-rose-400 font-medium">Co-Founder & Master Stylist</p>
                 </div>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 With over 2 years of experience in high-end salons, Taylor specializes in precision cuts 
-                and innovative color techniques that enhance natural beauty.
+                and innovative color techniques that enhance natural beauty. As a top stylist in Rocklin, 
+                she brings artistic vision to every client transformation.
               </p>
               <a href="https://www.instagram.com/hairby.taywinarski/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-rose-400 hover:text-rose-500">
                 <Instagram className="w-5 h-5 mr-2" />
@@ -83,18 +87,19 @@ const About: React.FC = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-rose-200 to-rose-300 rounded-full flex items-center justify-center">
                   <img
                     src={cover2}
-                    alt="Founder S"
+                    alt="Shantel Bernal - Co-Founder of T & S Studio Hair Salon in Rocklin, CA"
                     className="w-full h-full object-contain rounded-full"
                   />
                 </div>
                 <div>
                   <h3 className="text-xl font-serif font-bold text-gray-800">Shantel Bernal</h3>
-                  <p className="text-rose-400 font-medium">Co-Founder</p>
+                  <p className="text-rose-400 font-medium">Co-Founder & Color Specialist</p>
                 </div>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Shantel brings artistic vision and technical expertise to every transformation, 
-                specializing in balayage and creating stunning dimensional color.
+                specializing in balayage and creating stunning dimensional color. As one of the 
+                best colorists in Rocklin, CA, she creates personalized looks for each client.
               </p>
               <a href="https://www.instagram.com/shantelbernalhair/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-rose-400 hover:text-rose-500">
                 <Instagram className="w-5 h-5 mr-2" />
