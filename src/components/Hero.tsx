@@ -26,7 +26,10 @@ const Hero: React.FC = () => {
               "Where Artistry Meets Beauty"
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-gray-800 text-cream px-8 py-4 rounded-full hover:bg-gray-700 transition-all duration-300 font-medium flex items-center justify-center space-x-2 group">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="bg-gray-800 text-cream px-8 py-4 rounded-full hover:bg-gray-700 transition-all duration-300 font-medium flex items-center justify-center space-x-2 group"
+              >
                 <Calendar className="w-5 h-5" />
                 <span>Book Your Transformation</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -44,24 +47,12 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-rose-200 to-rose-300 rounded-2xl shadow-2xl flex items-center justify-center">
               <img
-                src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/src/assets/images/hero/homepage.jpg"
                 alt="Elegant hair styling at T & S Studio"
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-4 hidden sm:block">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-rose-400 rounded-full"></div>
-                <span className="text-sm font-medium text-gray-700">Premium Care</span>
-              </div>
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 hidden sm:block">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-rose-400 rounded-full"></div>
-                <span className="text-sm font-medium text-gray-700">Expert Artists</span>
-              </div>
-            </div>
+            {/* Floating elements - Removed as requested */}
           </div>
         </div>
       </div>

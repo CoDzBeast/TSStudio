@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Award, Users } from 'lucide-react';
+import { Heart, Award, Users, Instagram } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -30,21 +30,21 @@ const About: React.FC = () => {
                 <div className="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Heart className="w-8 h-8 text-rose-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">500+</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">100+</h3>
                 <p className="text-gray-600 text-sm">Happy Clients</p>
               </div>
               <div className="text-center">
                 <div className="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-rose-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">5+</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">2+</h3>
                 <p className="text-gray-600 text-sm">Years Experience</p>
               </div>
               <div className="text-center">
                 <div className="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-rose-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">6</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">2</h3>
                 <p className="text-gray-600 text-sm">Expert Artists</p>
               </div>
             </div>
@@ -56,43 +56,52 @@ const About: React.FC = () => {
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-rose-200 to-rose-300 rounded-full flex items-center justify-center">
                   <img
-                    src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    src="/src/assets/images/about/cover1.png"
                     alt="Founder T"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-contain rounded-full"
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-serif font-bold text-gray-800">Taylor Martinez</h3>
-                  <p className="text-rose-400 font-medium">Co-Founder & Master Stylist</p>
+                  <h3 className="text-xl font-serif font-bold text-gray-800">Taylor Winarski</h3>
+                  <p className="text-rose-400 font-medium">Co-Founder</p>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                With over 8 years of experience in high-end salons, Taylor specializes in precision cuts 
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                With over 2 years of experience in high-end salons, Taylor specializes in precision cuts 
                 and innovative color techniques that enhance natural beauty.
               </p>
+              <a href="https://www.instagram.com/hairby.taywinarski/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-rose-400 hover:text-rose-500">
+                <Instagram className="w-5 h-5 mr-2" />
+                <span>Follow on Instagram</span>
+              </a>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-rose-200 to-rose-300 rounded-full flex items-center justify-center">
                   <img
-                    src="https://images.pexels.com/photos/3992649/pexels-photo-3992649.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    src="/src/assets/images/about/cover2.jpg"
                     alt="Founder S"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-contain rounded-full"
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-serif font-bold text-gray-800">Sophia Chen</h3>
-                  <p className="text-rose-400 font-medium">Co-Founder & Color Specialist</p>
+                  <h3 className="text-xl font-serif font-bold text-gray-800">Shantel Bernal</h3>
+                  <p className="text-rose-400 font-medium">Co-Founder</p>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Sophia brings artistic vision and technical expertise to every transformation, 
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Shantel brings artistic vision and technical expertise to every transformation, 
                 specializing in balayage and creating stunning dimensional color.
               </p>
+              <a href="https://www.instagram.com/shantelbernalhair/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-rose-400 hover:text-rose-500">
+                <Instagram className="w-5 h-5 mr-2" />
+                <span>Follow on Instagram</span>
+              </a>
             </div>
           </div>
         </div>
+        
       </div>
     </section>
   );

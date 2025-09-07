@@ -32,9 +32,13 @@ const Header: React.FC = () => {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-2xl md:text-3xl font-serif font-bold text-gray-800 hover:text-rose-400 transition-colors duration-300"
+              className="hover:opacity-80 transition-opacity duration-300"
             >
-              T & S Studio
+              <img 
+                src="/src/assets/images/logo.png" 
+                alt="T & S Studio Logo" 
+                className="h-28 md:h-32 object-contain"
+              />
             </button>
           </div>
 
@@ -59,12 +63,6 @@ const Header: React.FC = () => {
               Services
             </button>
             <button
-              onClick={() => scrollToSection('team')}
-              className="text-gray-700 hover:text-rose-400 transition-colors duration-300 font-medium"
-            >
-              Team
-            </button>
-            <button
               onClick={() => scrollToSection('gallery')}
               className="text-gray-700 hover:text-rose-400 transition-colors duration-300 font-medium"
             >
@@ -76,7 +74,10 @@ const Header: React.FC = () => {
             >
               Contact
             </button>
-            <button className="bg-gray-800 text-cream px-6 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 font-medium flex items-center space-x-2">
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-gray-800 text-cream px-6 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 font-medium flex items-center space-x-2"
+            >
               <Phone className="w-4 h-4" />
               <span>Book Now</span>
             </button>
@@ -117,12 +118,6 @@ const Header: React.FC = () => {
               Services
             </button>
             <button
-              onClick={() => scrollToSection('team')}
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rose-400 transition-colors duration-300 w-full text-left"
-            >
-              Team
-            </button>
-            <button
               onClick={() => scrollToSection('gallery')}
               className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rose-400 transition-colors duration-300 w-full text-left"
             >
@@ -134,7 +129,10 @@ const Header: React.FC = () => {
             >
               Contact
             </button>
-            <button className="mx-3 mt-4 bg-gray-800 text-cream px-6 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 font-medium flex items-center space-x-2">
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="mx-3 mt-4 bg-gray-800 text-cream px-6 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 font-medium flex items-center space-x-2"
+            >
               <Phone className="w-4 h-4" />
               <span>Book Now</span>
             </button>

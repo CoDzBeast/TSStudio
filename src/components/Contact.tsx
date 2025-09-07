@@ -1,36 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from 'lucide-react';
+import BookingForm from './BookingForm';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
-  };
-
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-rose-100 to-rose-200">
+    <section id="contact" className="py-20 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-serif font-bold text-gray-800 mb-6">Visit Our Studio</h2>
@@ -42,184 +16,73 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-serif font-bold text-gray-800 mb-6">Get In Touch</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-rose-400" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Address</h4>
-                    <p className="text-gray-600">123 Beauty Lane<br />Elegance District, ED 12345</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-rose-400" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Phone</h4>
-                    <p className="text-gray-600">(555) 123-HAIR</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-rose-400" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Email</h4>
-                    <p className="text-gray-600">hello@tsstudio.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-rose-400" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Hours</h4>
-                    <div className="text-gray-600 text-sm">
-                      <p>Mon-Fri: 9:00 AM - 7:00 PM</p>
-                      <p>Saturday: 8:00 AM - 6:00 PM</p>
-                      <p>Sunday: 10:00 AM - 4:00 PM</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h4 className="font-semibold text-gray-800 mb-4">Follow Us</h4>
-                <div className="flex space-x-4">
-                  <a
-                    href="#"
-                    className="bg-rose-100 hover:bg-rose-200 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                  >
-                    <Instagram className="w-5 h-5 text-rose-400" />
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-rose-100 hover:bg-rose-200 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                  >
-                    <Facebook className="w-5 h-5 text-rose-400" />
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-rose-100 hover:bg-rose-200 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
-                  >
-                    <Twitter className="w-5 h-5 text-rose-400" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Map Placeholder */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-xl font-serif font-bold text-gray-800 mb-4">Find Us</h3>
-              <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                <p className="text-gray-500">Interactive Map Coming Soon</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
+          {/* Booking Form Component - Removed the extra rounded box container */}
+          <BookingForm />
+          
+          {/* Map and Contact Information */}
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-serif font-bold text-gray-800 mb-6">Book a Consultation</h3>
+            <h3 className="text-3xl font-serif font-bold text-gray-800 mb-4">Find Us</h3>
+            <div className="aspect-video rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.242412788155!2d-121.2645122235697!3d38.77981887666999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b21153b16c463%3A0xad3834778ccf93fe!2sMY%20SALON%20Suite!5e0!3m2!1sen!2sus!4v1725585000000!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="MY SALON Suite Location"
+              ></iframe>
+            </div>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all duration-300"
-                />
+            {/* Contact Information */}
+            <div className="mt-8 space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-rose-400" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800">Address</h4>
+                  <p className="text-gray-600">6810 Five Star Blvd<br />Rocklin, CA 95677</p>
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all duration-300"
-                />
+              <div className="flex items-center space-x-4">
+                <div className="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-rose-400" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800">Phone</h4>
+                  <p className="text-gray-600">(555) 123-HAIR</p>
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all duration-300"
-                />
+              <div className="flex items-center space-x-4">
+                <div className="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-rose-400" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800">Email</h4>
+                  <p className="text-gray-600">hello@tsstudio.com</p>
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Service Interest
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all duration-300"
-                >
-                  <option value="">Select a service</option>
-                  <option value="cut">Precision Cut</option>
-                  <option value="color">Color Services</option>
-                  <option value="balayage">Balayage & Highlights</option>
-                  <option value="events">Special Event Styling</option>
-                  <option value="treatments">Hair Treatments</option>
-                  <option value="consultation">Consultation Only</option>
-                </select>
+              <div className="flex items-center space-x-4">
+                <div className="bg-rose-100 w-12 h-12 rounded-full flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-rose-400" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800">Hours</h4>
+                  <div className="text-gray-600 text-sm">
+                    <p>Mon-Fri: 9:00 AM - 7:00 PM</p>
+                    <p>Saturday: 8:00 AM - 6:00 PM</p>
+                    <p>Sunday: 10:00 AM - 4:00 PM</p>
+                  </div>
+                </div>
               </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all duration-300"
-                  placeholder="Tell us about your hair goals or any specific requests..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-gray-800 text-cream py-4 rounded-lg hover:bg-gray-700 transition-all duration-300 font-semibold"
-              >
-                Send Message
-              </button>
-            </form>
+            </div>
+            
+            {/* Removed Social Media section since Instagram is already linked above */}
           </div>
         </div>
       </div>
