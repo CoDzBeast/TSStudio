@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
     <footer className="bg-cream text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex flex-col md:flex-row gap-8">
-          {/* Brand */}}
+          {/* Brand */}
           <div className="md:flex-1">
             <h3 className="text-3xl font-serif font-bold mb-4 text-gray-800">T & S Studio</h3>
             <p className="text-rose-400 mb-4 italic">Where Artistry Meets Beauty</p>
