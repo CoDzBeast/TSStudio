@@ -6,37 +6,37 @@ const Services: React.FC = () => {
     {
       icon: Scissors,
       title: 'Precision Cuts',
-      description: 'Tailored to your unique style and lifestyle. Our expert stylists in Rocklin, CA provide precision haircuts that complement your face shape and hair type.',
+      description: 'Tailored to your unique style and lifestyle. Our expert stylists provide precision haircuts that complement your face shape and hair type.',
       price: 'Starting at $65'
     },
     {
       icon: Palette,
       title: 'Color Mastery',
-      description: 'From subtle highlights to bold transformations. Our professional color services in Rocklin include full color, root touch-ups, and creative color combinations.',
+      description: 'From subtle highlights to bold transformations. Our professional color services include full color, root touch-ups, and creative color combinations.',
       price: 'Starting at $95'
     },
     {
       icon: Sparkles,
       title: 'Balayage & Highlights',
-      description: 'Hand-painted dimension and depth. Experience the best balayage services in Rocklin, CA for natural-looking, sun-kissed highlights that grow out beautifully.',
+      description: 'Hand-painted dimension and depth. Experience our expert balayage services for natural-looking, sun-kissed highlights that grow out beautifully.',
       price: 'Starting at $125'
     },
     {
       icon: Calendar,
       title: 'Special Event Styling',
-      description: 'Wedding, prom, and special occasion hair. Let our Rocklin salon artists create the perfect hairstyle for your important event.',
+      description: 'Wedding, prom, and special occasion hair. Let our salon artists create the perfect hairstyle for your important event.',
       price: 'Starting at $85'
     },
     {
       icon: Droplets,
       title: 'Hair Treatments',
-      description: 'Restore, strengthen, and revitalize. Our professional hair treatments in Rocklin include deep conditioning, keratin treatments, and damage repair.',
+      description: 'Restore, strengthen, and revitalize. Our professional hair treatments include deep conditioning, keratin treatments, and damage repair.',
       price: 'Starting at $45'
     },
     {
       icon: MessageCircle,
       title: 'Consultations',
-      description: 'Personalized styling recommendations. Book a complimentary consultation with our expert stylists in Rocklin to discuss your hair goals.',
+      description: 'Personalized styling recommendations. Book a complimentary consultation with our expert stylists to discuss your hair goals.',
       price: 'Complimentary'
     }
   ];
@@ -48,7 +48,7 @@ const Services: React.FC = () => {
           <h2 className="text-4xl font-serif font-bold text-gray-800 mb-6">Our Premium Hair Services</h2>
           <div className="w-24 h-1 bg-rose-400 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            Discover our comprehensive range of premium hair services in Rocklin, CA. 
+            Discover our comprehensive range of premium hair services. 
             Each service is expertly crafted with artistic precision and personalized attention 
             by our talented women-owned salon team.
           </p>
