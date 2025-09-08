@@ -32,12 +32,13 @@ const Services: React.FC = () => {
   };
 
   const servicesData = {
-    "notes_caption": "“+” indicates starting price. Prices may vary based on hair length, density, and condition. Final quotes provided at consultation.",
+    "notes_caption": "Prices may vary based on hair length, density, and condition. Final quotes provided at consultation.",
     "services": [
       {
         "id": "partial-highlight",
         "title": "Partial Highlight",
         "summary": "Face-frame and crown foils for brightness and soft dimension.",
+        "price_display": "Starting at $120",
         "price_taylor": "$120+",
         "price_shantel": "$150+",
         "details": {
@@ -51,6 +52,7 @@ const Services: React.FC = () => {
         "id": "full-highlight",
         "title": "Full Highlight",
         "summary": "Foils throughout for maximum brightness and all-over dimension.",
+        "price_display": "Starting at $170",
         "price_taylor": "$170+",
         "price_shantel": "$200+",
         "details": {
@@ -64,6 +66,7 @@ const Services: React.FC = () => {
         "id": "balayage",
         "title": "Balayage",
         "summary": "Hand-painted highlights for a natural, sun-kissed grow-out.",
+        "price_display": "Starting at $185",
         "price_taylor": "$185+",
         "price_shantel": "$215+",
         "details": {
@@ -77,6 +80,7 @@ const Services: React.FC = () => {
         "id": "mini-highlight",
         "title": "Mini Highlight",
         "summary": "Strategic foils (money piece/part line) for a quick refresh.",
+        "price_display": "Starting at $90",
         "price_taylor": "$90+",
         "price_shantel": "$120+",
         "details": {
@@ -90,6 +94,7 @@ const Services: React.FC = () => {
         "id": "all-over-color",
         "title": "All Over Color",
         "summary": "Single shade from roots to ends for rich, even coverage.",
+        "price_display": "Starting at $115",
         "price_taylor": "$115+",
         "price_shantel": "$115+",
         "details": {
@@ -103,6 +108,7 @@ const Services: React.FC = () => {
         "id": "root-touch-up",
         "title": "Root Touch-Up",
         "summary": "Covers new growth to blend grays or refresh natural base.",
+        "price_display": "Starting at $85",
         "price_taylor": "$85+",
         "price_shantel": "$90+",
         "details": {
@@ -116,6 +122,7 @@ const Services: React.FC = () => {
         "id": "toner-gloss",
         "title": "Toner / Gloss",
         "summary": "Adds shine and refines tone between color services.",
+        "price_display": "Starting at $55",
         "price_taylor": "$55",
         "price_shantel": "$60",
         "details": {
@@ -129,6 +136,7 @@ const Services: React.FC = () => {
         "id": "haircut",
         "title": "Haircut",
         "summary": "Customized haircut with cleanse and basic styling.",
+        "price_display": "Starting at $55",
         "price_taylor": "$55",
         "price_shantel": "$65",
         "details": {
@@ -141,6 +149,7 @@ const Services: React.FC = () => {
         "id": "cut-with-color",
         "title": "Cut with Color (Add-On)",
         "summary": "Discounted haircut when booked with any color service.",
+        "price_display": "Starting at $35",
         "price_taylor": "$35",
         "price_shantel": "$35",
         "details": {
@@ -153,6 +162,7 @@ const Services: React.FC = () => {
         "id": "shampoo-blowdry",
         "title": "Shampoo & Blow-Dry",
         "summary": "Lux cleanse and smooth blowout for a polished finish.",
+        "price_display": "Starting at $50",
         "price_taylor": "$60",
         "price_shantel": "$50",
         "details": {
@@ -165,6 +175,7 @@ const Services: React.FC = () => {
         "id": "extra-color",
         "title": "Extra Color / Bowl (Add-On)",
         "summary": "Additional color/lightener for length, density, or transformations.",
+        "price_display": "Starting at $15",
         "price_taylor": "$15",
         "price_shantel": "$15",
         "details": {
@@ -177,6 +188,7 @@ const Services: React.FC = () => {
         "id": "k18",
         "title": "K18 Add-On",
         "summary": "Molecular repair treatment to strengthen compromised hair.",
+        "price_display": "Starting at $40",
         "price_taylor": "$40",
         "price_shantel": "$50",
         "details": {
@@ -190,6 +202,7 @@ const Services: React.FC = () => {
         "id": "conditioning-treatment",
         "title": "Conditioning Treatment",
         "summary": "Intense hydration and softness with a custom mask.",
+        "price_display": "Starting at $35",
         "price_taylor": "—",
         "price_shantel": "$35",
         "details": {
@@ -203,6 +216,7 @@ const Services: React.FC = () => {
         "id": "weft-initial-install",
         "title": "Weft Extensions — Initial Install",
         "summary": "Custom install of hand-tied or machine wefts. Hair not included.",
+        "price_display": "Starting at $150",
         "price_taylor": "$150+",
         "price_shantel": "$185+",
         "details": {
@@ -215,6 +229,7 @@ const Services: React.FC = () => {
         "id": "bump-up",
         "title": "Bump Up (Move-Up)",
         "summary": "Reposition rows closer to the scalp between full maintenance.",
+        "price_display": "Starting at $60",
         "price_taylor": "$60+",
         "price_shantel": "$60+",
         "details": {
@@ -227,6 +242,7 @@ const Services: React.FC = () => {
         "id": "weft-full-maintenance",
         "title": "Weft Full Maintenance",
         "summary": "Remove, refresh, and reinstall extensions for best comfort and wear.",
+        "price_display": "Starting at $100",
         "price_taylor": "$100+",
         "price_shantel": "$150+",
         "details": {
@@ -240,6 +256,7 @@ const Services: React.FC = () => {
         "id": "extension-removal",
         "title": "Extension Removal",
         "summary": "Safe removal of extensions while protecting natural hair.",
+        "price_display": "Starting at $60",
         "price_taylor": "$75+",
         "price_shantel": "$60+",
         "details": {
@@ -251,6 +268,7 @@ const Services: React.FC = () => {
         "id": "extension-blowout",
         "title": "Extension Blowout",
         "summary": "Blowout tailored for extensions with smooth, polished finish.",
+        "price_display": "Starting at $70",
         "price_taylor": "$75",
         "price_shantel": "$70",
         "details": {
@@ -306,18 +324,9 @@ const Services: React.FC = () => {
                   {service.summary}
                 </p>
                 <div className="flex items-center justify-between">
-                  <div className="flex flex-col">
-                    <span className="text-xs text-gray-500">Taylor</span>
-                    <span className="text-rose-400 font-semibold">
-                      {service.price_taylor}
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-xs text-gray-500">Shantel</span>
-                    <span className="text-rose-400 font-semibold">
-                      {service.price_shantel}
-                    </span>
-                  </div>
+                  <span className="text-rose-400 font-semibold">
+                    {service.price_display}
+                  </span>
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
@@ -382,6 +391,24 @@ const Services: React.FC = () => {
                         {selectedService.details.description}
                       </p>
                     )}
+                    
+                    {/* Display stylist-specific pricing in the modal */}
+                    <div className="bg-rose-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-gray-800 mb-2">Pricing:</h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div>
+                          <p className="text-sm text-gray-600">Taylor</p>
+                          <p className="font-medium">{selectedService.price_taylor}</p>
+                        </div>
+                        <div>
+                          <p className="text-sm text-gray-600">Shantel</p>
+                          <p className="font-medium">{selectedService.price_shantel}</p>
+                        </div>
+                      </div>
+                      {selectedService.price_taylor.includes('+') || selectedService.price_shantel.includes('+') ? (
+                        <p className="text-xs text-gray-600 mt-2">+ indicates starting price. Final price depends on hair length, density, and condition.</p>
+                      ) : null}
+                    </div>
                     
                     {selectedService.details.includes && (
                       <div className="bg-rose-50 p-4 rounded-lg">

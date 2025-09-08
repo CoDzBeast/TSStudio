@@ -72,9 +72,8 @@ const About: React.FC = () => {
                 </div>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                With over 2 years of experience in high-end salons, Taylor specializes in precision cuts 
-                and innovative color techniques that enhance natural beauty. As a top stylist in Rocklin, 
-                she brings artistic vision to every client transformation.
+                Taylor is an experienced stylist who specializes in blondes, brunettes & extensions. 
+                She is 2x extension certified and prioritizes the art of proper extension installation.
               </p>
               <a href="https://www.instagram.com/hairby.taywinarski/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-rose-400 hover:text-rose-500">
                 <Instagram className="w-5 h-5 mr-2" />
@@ -97,9 +96,9 @@ const About: React.FC = () => {
                 </div>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Shantel brings artistic vision and technical expertise to every transformation, 
-                specializing in balayage and creating stunning dimensional color. As one of the 
-                best colorists in Rocklin, CA, she creates personalized looks for each client.
+                Shantel is a licensed stylist of 3 years making her experience very valuable. 
+                She specializes in blondes and extensions and her goal is to create gorgeous 
+                flawless blended blondes while maintaining your hair's health.
               </p>
               <a href="https://www.instagram.com/shantelbernalhair/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-rose-400 hover:text-rose-500">
                 <Instagram className="w-5 h-5 mr-2" />
