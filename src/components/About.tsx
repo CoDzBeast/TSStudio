@@ -24,7 +24,7 @@ const About: React.FC = () => {
             </p>
             <p className="text-gray-600 leading-relaxed">
               Our passion lies in understanding each client's unique beauty and enhancing it through 
-              personalized treatments. Every visit to our Rocklin salon is crafted to be a transformative 
+              personalized treatments. Every visit to our salon is crafted to be a transformative 
               experience that goes beyond just hair styling. We specialize in balayage, precision cuts, 
               and color services that make you look and feel your best.
             </p>

@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                   onClick={() => scrollToSection('hero')}
                   className="text-gray-600 hover:text-rose-400 transition-colors duration-300"
                 >
-                  Home - Premier Hair Salon Rocklin
+                  Home 
                 </button>
               </li>
               <li>
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                   onClick={() => scrollToSection('about')}
                   className="text-gray-600 hover:text-rose-400 transition-colors duration-300"
                 >
-                  About Our Rocklin Salon
+                  About Us
                 </button>
               </li>
               <li>
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                   onClick={() => scrollToSection('services')}
                   className="text-gray-600 hover:text-rose-400 transition-colors duration-300"
                 >
-                  Hair Services - Cuts & Color
+                  Hair Services 
                 </button>
               </li>
               <li>
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
                   onClick={() => scrollToSection('gallery')}
                   className="text-gray-600 hover:text-rose-400 transition-colors duration-300"
                 >
-                  Hair Gallery - Before & After
+                  Hair Gallery 
                 </button>
               </li>
               <li>
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
                   onClick={() => scrollToSection('contact')}
                   className="text-gray-600 hover:text-rose-400 transition-colors duration-300"
                 >
-                  Contact - Book Appointment
+                  Contact 
                 </button>
               </li>
             </ul>
