@@ -32,14 +32,14 @@ const Services: React.FC = () => {
   };
 
   const servicesData = {
-    "notes_caption": "“+” indicates starting price. Final quotes at consultation.",
+    "notes_caption": "“+” indicates starting price. Prices may vary based on hair length, density, and condition. Final quotes provided at consultation.",
     "services": [
       {
         "id": "partial-highlight",
         "title": "Partial Highlight",
         "summary": "Face-frame and crown foils for brightness and soft dimension.",
-        "price_taylor": "120+",
-        "price_shantel": "150+",
+        "price_taylor": "$120+",
+        "price_shantel": "$150+",
         "details": {
           "description": "Brightens the face-frame and crown using foils for soft, natural-looking dimension. This is a great option if you want noticeable brightness in the areas that matter most without committing to a full highlight.",
           "includes": "Foils in strategic areas, toner/gloss if needed.",
@@ -51,8 +51,8 @@ const Services: React.FC = () => {
         "id": "full-highlight",
         "title": "Full Highlight",
         "summary": "Foils throughout for maximum brightness and all-over dimension.",
-        "price_taylor": "170+",
-        "price_shantel": "200+",
+        "price_taylor": "$170+",
+        "price_shantel": "$200+",
         "details": {
           "description": "Foils are placed throughout the entire head for maximum brightness and a uniform blonde look from root to tip. This creates the most dramatic transformation with balanced dimension all over.",
           "includes": "Toner/gloss to refine tone.",
@@ -64,8 +64,8 @@ const Services: React.FC = () => {
         "id": "balayage",
         "title": "Balayage",
         "summary": "Hand-painted highlights for a natural, sun-kissed grow-out.",
-        "price_taylor": "185+",
-        "price_shantel": "215+",
+        "price_taylor": "$185+",
+        "price_shantel": "$215+",
         "details": {
           "description": "A hand-painted highlighting technique that creates a sun-kissed, blended effect with soft grow-out. Balayage offers a lower-maintenance option compared to traditional foils while still delivering impactful lightness.",
           "includes": "Gloss/toner, hand-painted placement customized for your cut.",
@@ -77,8 +77,8 @@ const Services: React.FC = () => {
         "id": "mini-highlight",
         "title": "Mini Highlight",
         "summary": "Strategic foils (money piece/part line) for a quick refresh.",
-        "price_taylor": "90+",
-        "price_shantel": "120+",
+        "price_taylor": "$90+",
+        "price_shantel": "$120+",
         "details": {
           "description": "A few foils around the part line or face-frame for a quick brightness refresh. Perfect for in-between appointments or before special events.",
           "includes": "Toner/gloss if needed.",
@@ -90,8 +90,8 @@ const Services: React.FC = () => {
         "id": "all-over-color",
         "title": "All Over Color",
         "summary": "Single shade from roots to ends for rich, even coverage.",
-        "price_taylor": "115+",
-        "price_shantel": "115+",
+        "price_taylor": "$115+",
+        "price_shantel": "$115+",
         "details": {
           "description": "A single shade applied from roots to ends to create a consistent, even color. Ideal for going darker, refreshing faded tones, or covering uneven color.",
           "includes": "Full-head application. Blow-dry/style not included unless added.",
@@ -103,8 +103,8 @@ const Services: React.FC = () => {
         "id": "root-touch-up",
         "title": "Root Touch-Up",
         "summary": "Covers new growth to blend grays or refresh natural base.",
-        "price_taylor": "85+",
-        "price_shantel": "90+",
+        "price_taylor": "$85+",
+        "price_shantel": "$90+",
         "details": {
           "description": "Color applied just to the regrowth area (about 1 inch) to cover grays or maintain a base shade.",
           "includes": "Root application only.",
@@ -203,8 +203,8 @@ const Services: React.FC = () => {
         "id": "weft-initial-install",
         "title": "Weft Extensions — Initial Install",
         "summary": "Custom install of hand-tied or machine wefts. Hair not included.",
-        "price_taylor": "150+",
-        "price_shantel": "185+",
+        "price_taylor": "$150+",
+        "price_shantel": "$185+",
         "details": {
           "description": "Professional application of hand-tied or machine wefts using a bead-and-sew method that blends seamlessly with your natural hair. Includes a custom placement plan and installation. (Hair not included.)",
           "ideal_for": "Adding length, fullness, or filling in thin sides.",
@@ -215,8 +215,8 @@ const Services: React.FC = () => {
         "id": "bump-up",
         "title": "Bump Up (Move-Up)",
         "summary": "Reposition rows closer to the scalp between full maintenance.",
-        "price_taylor": "60+",
-        "price_shantel": "60+",
+        "price_taylor": "$60+",
+        "price_shantel": "$60+",
         "details": {
           "description": "Repositions your extension rows closer to the scalp to maintain comfort and discreetness between full maintenance sessions.",
           "ideal_for": "Clients looking for a quick refresh between larger appointments.",
@@ -227,8 +227,8 @@ const Services: React.FC = () => {
         "id": "weft-full-maintenance",
         "title": "Weft Full Maintenance",
         "summary": "Remove, refresh, and reinstall extensions for best comfort and wear.",
-        "price_taylor": "100+",
-        "price_shantel": "150+",
+        "price_taylor": "$100+",
+        "price_shantel": "$150+",
         "details": {
           "description": "Complete removal and reinstall of extension rows. Keeps extensions feeling light, comfortable, and secure while maintaining healthy natural hair.",
           "includes": "Detangling, track clean-up, and reinstall.",
@@ -240,8 +240,8 @@ const Services: React.FC = () => {
         "id": "extension-removal",
         "title": "Extension Removal",
         "summary": "Safe removal of extensions while protecting natural hair.",
-        "price_taylor": "75+",
-        "price_shantel": "60+",
+        "price_taylor": "$75+",
+        "price_shantel": "$60+",
         "details": {
           "description": "Safe and gentle removal of extensions to protect your natural hair. Includes cleansing and detangling after removal.",
           "ideal_for": "Clients transitioning out of extensions or changing methods."
