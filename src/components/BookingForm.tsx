@@ -131,7 +131,7 @@ const BookingForm: React.FC = () => {
   const getSummaryText = () => {
     if (!selectedStylist || !selectedAppointmentType) return '';
     
-    const stylistName = selectedStylist === 'owner' ? 'Founder T' : 'Shantel Bernal';
+    const stylistName = selectedStylist === 'owner' ? 'Taylor Winarski' : 'Shantel Bernal';
     const appointmentTypeName = selectedAppointmentType === 'new-client' ? 'New Client' : 'Extension Consultation';
     
     return `${stylistName} - ${appointmentTypeName}`;
