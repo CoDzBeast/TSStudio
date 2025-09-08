@@ -1,95 +1,265 @@
 import React, { useState } from 'react';
-import { Scissors, Palette, Sparkles, Calendar, Droplets, MessageCircle } from 'lucide-react';
+import { Scissors, Palette, Sparkles, Calendar, Droplets, MessageCircle, Zap, Layers, Heart } from 'lucide-react';
 
 const Services: React.FC = () => {
-  const [expandedService, setExpandedService] = useState<number | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [selectedService, setSelectedService] = useState<any>(null);
 
-  const services = [
-    {
-      icon: Scissors,
-      title: 'Precision Cuts',
-      description: 'Tailored to your unique style and lifestyle. Our expert stylists provide precision haircuts that complement your face shape and hair type.',
-      price: 'Starting at $65',
-      details: 'Our precision cuts are customized to enhance your natural features. We use premium cutting techniques including point cutting, slide cutting, and texturizing to create dimension and movement. Each cut includes a consultation to understand your lifestyle, hair type, and styling preferences. Our stylists are trained in the latest cutting methods and use professional-grade tools for the cleanest results.',
-      duration: '45-60 minutes',
-      recommendedFor: 'All hair types and face shapes'
-    },
-    {
-      icon: Palette,
-      title: 'Color Mastery',
-      description: 'From subtle highlights to bold transformations. Our professional color services include full color, root touch-ups, and creative color combinations.',
-      price: 'Starting at $95',
-      details: 'Our color services use premium brands like L\'Oréal, Wella, and Pravana to ensure vibrant, long-lasting results. We offer full color services including single-process color, root touch-ups, balayage, ombre, and creative color combinations. Our colorists are certified in advanced techniques and will consult with you to create a customized color plan that enhances your complexion and lifestyle.',
-      duration: '2-3 hours',
-      recommendedFor: 'Clients looking for a complete color transformation'
-    },
-    {
-      icon: Sparkles,
-      title: 'Balayage & Highlights',
-      description: 'Hand-painted dimension and depth. Experience our expert balayage services for natural-looking, sun-kissed highlights that grow out beautifully.',
-      price: 'Starting at $125',
-      details: 'Our signature balayage technique creates a natural, sun-kissed effect that grows out beautifully without harsh lines of demarcation. We use a freehand painting method to strategically place highlights throughout your hair for a multidimensional look. This service includes a deep conditioning treatment to maintain hair health and shine.',
-      duration: '2.5-3 hours',
-      recommendedFor: 'Clients wanting low-maintenance, natural-looking highlights'
-    },
-    {
-      icon: Calendar,
-      title: 'Special Event Styling',
-      description: 'Wedding, prom, and special occasion hair. Let our salon artists create the perfect hairstyle for your important event.',
-      price: 'Starting at $85',
-      details: 'Our special event styling service ensures you look flawless for your important occasion. We specialize in elegant updos, romantic curls, sleek styles, and trendy looks. We recommend booking a consultation at least 2 weeks before your event to discuss your vision and do a trial run. We also provide touch-up services on the day of your event.',
-      duration: '1-2 hours',
-      recommendedFor: 'Brides, prom goers, and special occasion attendees'
-    },
-    {
-      icon: Droplets,
-      title: 'Hair Treatments',
-      description: 'Restore, strengthen, and revitalize. Our professional hair treatments include deep conditioning, keratin treatments, and damage repair.',
-      price: 'Starting at $45',
-      details: 'Revitalize your hair with our professional treatment services. Our deep conditioning treatments use premium products to restore moisture and shine. Keratin treatments smooth and reduce frizz for up to 12 weeks. Damage repair treatments rebuild hair strength and prevent breakage. Each treatment is customized to your hair\'s specific needs.',
-      duration: '45-90 minutes',
-      recommendedFor: 'All hair types, especially chemically treated or damaged hair'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Consultations',
-      description: 'Personalized styling recommendations. Book a complimentary consultation with our expert stylists to discuss your hair goals.',
-      price: 'Complimentary',
-      details: 'Our complimentary consultation is the first step to achieving your dream hair. During this session, we\'ll discuss your lifestyle, styling habits, and hair goals. We\'ll analyze your hair type, face shape, and skin tone to recommend the best services for you. This is also an opportunity to ask questions and get to know your stylist before booking services.',
-      duration: '30 minutes',
-      recommendedFor: 'New clients and those wanting to try new services'
-    },
-    // Placeholder services
-    {
-      icon: Sparkles,
-      title: 'Styling Services',
-      description: 'Professional blowouts and styling for any occasion.',
-      price: 'Starting at $45',
-      details: 'Placeholder for styling services details.',
-      duration: '30-45 minutes',
-      recommendedFor: 'Placeholder for recommendations.'
-    },
-    {
-      icon: Droplets,
-      title: 'Extensions',
-      description: 'Premium hair extensions for added length, volume, or color.',
-      price: 'Starting at $200',
-      details: 'Placeholder for extensions services details.',
-      duration: '2-3 hours',
-      recommendedFor: 'Placeholder for recommendations.'
-    },
-    {
-      icon: Calendar,
-      title: 'Makeup Services',
-      description: 'Professional makeup application for special events.',
-      price: 'Starting at $75',
-      details: 'Placeholder for makeup services details.',
-      duration: '1 hour',
-      recommendedFor: 'Placeholder for recommendations.'
-    }
-  ];
+  // Map service IDs to appropriate icons
+  const getIconForService = (id: string) => {
+    const iconMap: Record<string, any> = {
+      'partial-highlight': Sparkles,
+      'full-highlight': Sparkles,
+      'balayage': Sparkles,
+      'mini-highlight': Sparkles,
+      'all-over-color': Palette,
+      'root-touch-up': Palette,
+      'toner-gloss': Palette,
+      'haircut': Scissors,
+      'cut-with-color': Scissors,
+      'shampoo-blowdry': Droplets,
+      'extra-color': Palette,
+      'k18': Heart,
+      'conditioning-treatment': Droplets,
+      'weft-initial-install': Layers,
+      'bump-up': Zap,
+      'weft-full-maintenance': Layers,
+      'extension-removal': Layers,
+      'extension-consultation': MessageCircle,
+      'extension-blowout': Droplets
+    };
+    return iconMap[id] || Scissors; // Default to Scissors icon if not found
+  };
+
+  const servicesData = {
+    "notes_caption": "“+” indicates starting price. Final quotes at consultation.",
+    "services": [
+      {
+        "id": "partial-highlight",
+        "title": "Partial Highlight",
+        "summary": "Face-frame and crown foils for brightness and soft dimension.",
+        "price_taylor": "120+",
+        "price_shantel": "150+",
+        "details": {
+          "description": "Brightens the face-frame and crown using foils for soft, natural-looking dimension. This is a great option if you want noticeable brightness in the areas that matter most without committing to a full highlight.",
+          "includes": "Foils in strategic areas, toner/gloss if needed.",
+          "ideal_for": "Clients maintaining between full highlight sessions or those looking for subtle enhancement.",
+          "maintenance": "Every 6–8 weeks for consistent brightness."
+        }
+      },
+      {
+        "id": "full-highlight",
+        "title": "Full Highlight",
+        "summary": "Foils throughout for maximum brightness and all-over dimension.",
+        "price_taylor": "170+",
+        "price_shantel": "200+",
+        "details": {
+          "description": "Foils are placed throughout the entire head for maximum brightness and a uniform blonde look from root to tip. This creates the most dramatic transformation with balanced dimension all over.",
+          "includes": "Toner/gloss to refine tone.",
+          "ideal_for": "Those wanting bold, all-over brightness or a big seasonal change.",
+          "maintenance": "Every 8–12 weeks depending on grow-out."
+        }
+      },
+      {
+        "id": "balayage",
+        "title": "Balayage",
+        "summary": "Hand-painted highlights for a natural, sun-kissed grow-out.",
+        "price_taylor": "185+",
+        "price_shantel": "215+",
+        "details": {
+          "description": "A hand-painted highlighting technique that creates a sun-kissed, blended effect with soft grow-out. Balayage offers a lower-maintenance option compared to traditional foils while still delivering impactful lightness.",
+          "includes": "Gloss/toner, hand-painted placement customized for your cut.",
+          "ideal_for": "Clients who want a natural “lived-in” look that grows out seamlessly.",
+          "maintenance": "3–6 months with toners in between."
+        }
+      },
+      {
+        "id": "mini-highlight",
+        "title": "Mini Highlight",
+        "summary": "Strategic foils (money piece/part line) for a quick refresh.",
+        "price_taylor": "90+",
+        "price_shantel": "120+",
+        "details": {
+          "description": "A few foils around the part line or face-frame for a quick brightness refresh. Perfect for in-between appointments or before special events.",
+          "includes": "Toner/gloss if needed.",
+          "ideal_for": "Busy clients who want a touch-up without a full process.",
+          "maintenance": "Every 6–8 weeks as desired."
+        }
+      },
+      {
+        "id": "all-over-color",
+        "title": "All Over Color",
+        "summary": "Single shade from roots to ends for rich, even coverage.",
+        "price_taylor": "115+",
+        "price_shantel": "115+",
+        "details": {
+          "description": "A single shade applied from roots to ends to create a consistent, even color. Ideal for going darker, refreshing faded tones, or covering uneven color.",
+          "includes": "Full-head application. Blow-dry/style not included unless added.",
+          "ideal_for": "Clients who want depth, shine, or one solid tone.",
+          "maintenance": "Every 4–6 weeks to maintain vibrancy."
+        }
+      },
+      {
+        "id": "root-touch-up",
+        "title": "Root Touch-Up",
+        "summary": "Covers new growth to blend grays or refresh natural base.",
+        "price_taylor": "85+",
+        "price_shantel": "90+",
+        "details": {
+          "description": "Color applied just to the regrowth area (about 1 inch) to cover grays or maintain a base shade.",
+          "includes": "Root application only.",
+          "ideal_for": "Clients with gray coverage needs or noticeable new growth.",
+          "maintenance": "Every 4–6 weeks."
+        }
+      },
+      {
+        "id": "toner-gloss",
+        "title": "Toner / Gloss",
+        "summary": "Adds shine and refines tone between color services.",
+        "price_taylor": "$55",
+        "price_shantel": "$60",
+        "details": {
+          "description": "Adds shine and refines color tone in just one step. Used to cancel brassiness, refresh blonde, or add depth and gloss to natural hair.",
+          "includes": "Toner application + quick dry finish.",
+          "ideal_for": "Blonde, balayage, or colored hair that's fading or turning brassy.",
+          "maintenance": "Every 4–6 weeks between color services."
+        }
+      },
+      {
+        "id": "haircut",
+        "title": "Haircut",
+        "summary": "Customized haircut with cleanse and basic styling.",
+        "price_taylor": "$55",
+        "price_shantel": "$65",
+        "details": {
+          "description": "A customized haircut tailored to your face shape, hair type, and lifestyle. Includes a cleanse and blow-dry for a polished finish.",
+          "ideal_for": "Trims, reshaping your cut, or creating a brand-new look.",
+          "maintenance": "Every 6–10 weeks depending on style and length."
+        }
+      },
+      {
+        "id": "cut-with-color",
+        "title": "Cut with Color (Add-On)",
+        "summary": "Discounted haircut when booked with any color service.",
+        "price_taylor": "$35",
+        "price_shantel": "$35",
+        "details": {
+          "description": "Receive a haircut at a discounted rate when paired with a color or highlight service. Perfect for refreshing both your color and cut in the same visit.",
+          "includes": "Wash and style.",
+          "maintenance": "Matches your color schedule."
+        }
+      },
+      {
+        "id": "shampoo-blowdry",
+        "title": "Shampoo & Blow-Dry",
+        "summary": "Lux cleanse and smooth blowout for a polished finish.",
+        "price_taylor": "$60",
+        "price_shantel": "$50",
+        "details": {
+          "description": "A luxurious cleanse followed by a blowout styled to your preference—sleek, smooth, or bouncy with volume.",
+          "ideal_for": "Events, nights out, or weekly maintenance.",
+          "maintenance": "As often as you'd like for that fresh-salon finish."
+        }
+      },
+      {
+        "id": "extra-color",
+        "title": "Extra Color / Bowl (Add-On)",
+        "summary": "Additional color/lightener for length, density, or transformations.",
+        "price_taylor": "$15",
+        "price_shantel": "$15",
+        "details": {
+          "description": "Additional product required for longer, thicker, or denser hair types, or when performing a full transformation.",
+          "includes": "One additional bowl of color or lightener.",
+          "note": "This is added on top of your base color service."
+        }
+      },
+      {
+        "id": "k18",
+        "title": "K18 Add-On",
+        "summary": "Molecular repair treatment to strengthen compromised hair.",
+        "price_taylor": "$40",
+        "price_shantel": "$50",
+        "details": {
+          "description": "A revolutionary molecular repair treatment that rebuilds broken bonds inside the hair to restore strength, softness, and elasticity. Especially effective on lightened or chemically treated hair.",
+          "includes": "Leave-in formula applied during your color or cut service.",
+          "ideal_for": "Compromised, damaged, or over-processed hair.",
+          "maintenance": "Add to each color session for best results."
+        }
+      },
+      {
+        "id": "conditioning-treatment",
+        "title": "Conditioning Treatment",
+        "summary": "Intense hydration and softness with a custom mask.",
+        "price_taylor": "—",
+        "price_shantel": "$35",
+        "details": {
+          "description": "A deep, nourishing mask designed to hydrate and smooth hair while restoring shine.",
+          "includes": "Treatment application, often under heat for deeper penetration.",
+          "ideal_for": "Dry, brittle, frizzy, or curly hair in need of softness.",
+          "maintenance": "Every 2–4 weeks as needed."
+        }
+      },
+      {
+        "id": "weft-initial-install",
+        "title": "Weft Extensions — Initial Install",
+        "summary": "Custom install of hand-tied or machine wefts. Hair not included.",
+        "price_taylor": "150+",
+        "price_shantel": "185+",
+        "details": {
+          "description": "Professional application of hand-tied or machine wefts using a bead-and-sew method that blends seamlessly with your natural hair. Includes a custom placement plan and installation. (Hair not included.)",
+          "ideal_for": "Adding length, fullness, or filling in thin sides.",
+          "maintenance": "Move-ups recommended every 6–10 weeks."
+        }
+      },
+      {
+        "id": "bump-up",
+        "title": "Bump Up (Move-Up)",
+        "summary": "Reposition rows closer to the scalp between full maintenance.",
+        "price_taylor": "60+",
+        "price_shantel": "60+",
+        "details": {
+          "description": "Repositions your extension rows closer to the scalp to maintain comfort and discreetness between full maintenance sessions.",
+          "ideal_for": "Clients looking for a quick refresh between larger appointments.",
+          "maintenance": "Every 4–6 weeks."
+        }
+      },
+      {
+        "id": "weft-full-maintenance",
+        "title": "Weft Full Maintenance",
+        "summary": "Remove, refresh, and reinstall extensions for best comfort and wear.",
+        "price_taylor": "100+",
+        "price_shantel": "150+",
+        "details": {
+          "description": "Complete removal and reinstall of extension rows. Keeps extensions feeling light, comfortable, and secure while maintaining healthy natural hair.",
+          "includes": "Detangling, track clean-up, and reinstall.",
+          "ideal_for": "Regular upkeep to maximize longevity of extensions.",
+          "maintenance": "Every 6–10 weeks."
+        }
+      },
+      {
+        "id": "extension-removal",
+        "title": "Extension Removal",
+        "summary": "Safe removal of extensions while protecting natural hair.",
+        "price_taylor": "75+",
+        "price_shantel": "60+",
+        "details": {
+          "description": "Safe and gentle removal of extensions to protect your natural hair. Includes cleansing and detangling after removal.",
+          "ideal_for": "Clients transitioning out of extensions or changing methods."
+        }
+      },
+      {
+        "id": "extension-blowout",
+        "title": "Extension Blowout",
+        "summary": "Blowout tailored for extensions with smooth, polished finish.",
+        "price_taylor": "$75",
+        "price_shantel": "$70",
+        "details": {
+          "description": "A blow-dry service tailored to extensions for a smooth, polished finish. Ensures seamless blending between natural hair and added wefts.",
+          "ideal_for": "Events, photoshoots, or whenever you want a flawless finish."
+        }
+      }
+    ]
+  };
 
   const openModal = (service: any) => {
     setSelectedService(service);
@@ -112,11 +282,14 @@ const Services: React.FC = () => {
             Each service is expertly crafted with artistic precision and personalized attention 
             by our talented women-owned salon team.
           </p>
+          <div className="mt-4 text-sm text-gray-600 italic">
+            {servicesData.notes_caption}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
+          {servicesData.services.map((service, index) => {
+            const IconComponent = getIconForService(service.id);
             
             return (
               <div
@@ -130,12 +303,21 @@ const Services: React.FC = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  {service.description}
+                  {service.summary}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-rose-400 font-semibold">
-                    {service.price}
-                  </span>
+                  <div className="flex flex-col">
+                    <span className="text-xs text-gray-500">Taylor</span>
+                    <span className="text-rose-400 font-semibold">
+                      {service.price_taylor}
+                    </span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-xs text-gray-500">Shantel</span>
+                    <span className="text-rose-400 font-semibold">
+                      {service.price_shantel}
+                    </span>
+                  </div>
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
@@ -159,15 +341,26 @@ const Services: React.FC = () => {
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex items-center">
                     <div className="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mr-4">
-                      {selectedService.icon && React.createElement(selectedService.icon, { className: "w-8 h-8 text-rose-400" })}
+                      {React.createElement(getIconForService(selectedService.id), { className: "w-8 h-8 text-rose-400" })}
                     </div>
                     <div>
                       <h3 className="text-2xl font-serif font-bold text-gray-800">
                         {selectedService.title}
                       </h3>
-                      <p className="text-rose-400 font-semibold">
-                        {selectedService.price}
-                      </p>
+                      <div className="flex space-x-4 mt-2">
+                        <div>
+                          <p className="text-xs text-gray-500">Taylor</p>
+                          <p className="text-rose-400 font-semibold">
+                            {selectedService.price_taylor}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs text-gray-500">Shantel</p>
+                          <p className="text-rose-400 font-semibold">
+                            {selectedService.price_shantel}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <button 
@@ -179,26 +372,59 @@ const Services: React.FC = () => {
                 </div>
                 
                 <p className="text-gray-700 mb-6">
-                  {selectedService.description}
+                  {selectedService.summary}
                 </p>
                 
-                <p className="text-gray-700 mb-6">
-                  {selectedService.details}
-                </p>
+                {selectedService.details && (
+                  <div className="space-y-4 mb-6">
+                    {selectedService.details.description && (
+                      <p className="text-gray-700">
+                        {selectedService.details.description}
+                      </p>
+                    )}
+                    
+                    {selectedService.details.includes && (
+                      <div className="bg-rose-50 p-4 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 mb-2">Includes:</h4>
+                        <p className="text-gray-700">
+                          {selectedService.details.includes}
+                        </p>
+                      </div>
+                    )}
+                    
+                    {selectedService.details.ideal_for && (
+                      <div className="bg-rose-50 p-4 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 mb-2">Ideal For:</h4>
+                        <p className="text-gray-700">
+                          {selectedService.details.ideal_for}
+                        </p>
+                      </div>
+                    )}
+                    
+                    {selectedService.details.maintenance && (
+                      <div className="bg-rose-50 p-4 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 mb-2">Maintenance:</h4>
+                        <p className="text-gray-700">
+                          {selectedService.details.maintenance}
+                        </p>
+                      </div>
+                    )}
+                    
+                    {selectedService.details.note && (
+                      <div className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-400">
+                        <h4 className="font-semibold text-gray-800 mb-2">Note:</h4>
+                        <p className="text-gray-700">
+                          {selectedService.details.note}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
                 
                 <div className="bg-rose-50 p-6 rounded-lg mb-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <p className="text-sm text-gray-800">
-                        <span className="font-semibold">Duration:</span> {selectedService.duration}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-800">
-                        <span className="font-semibold">Recommended for:</span> {selectedService.recommendedFor}
-                      </p>
-                    </div>
-                  </div>
+                  <p className="text-sm text-gray-800 italic">
+                    {servicesData.notes_caption}
+                  </p>
                 </div>
                 
                 <div className="flex justify-end">
