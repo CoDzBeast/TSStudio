@@ -356,19 +356,10 @@ const Services: React.FC = () => {
                       <h3 className="text-2xl font-serif font-bold text-gray-800">
                         {selectedService.title}
                       </h3>
-                      <div className="flex space-x-4 mt-2">
-                        <div>
-                          <p className="text-xs text-gray-500">Taylor</p>
-                          <p className="text-rose-400 font-semibold">
-                            {selectedService.price_taylor}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-xs text-gray-500">Shantel</p>
-                          <p className="text-rose-400 font-semibold">
-                            {selectedService.price_shantel}
-                          </p>
-                        </div>
+                      <div className="mt-2">
+                        <p className="text-rose-400 font-semibold">
+                          {selectedService.price_display}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -391,24 +382,6 @@ const Services: React.FC = () => {
                         {selectedService.details.description}
                       </p>
                     )}
-                    
-                    {/* Display stylist-specific pricing in the modal */}
-                    <div className="bg-rose-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-gray-800 mb-2">Pricing:</h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        <div>
-                          <p className="text-sm text-gray-600">Taylor</p>
-                          <p className="font-medium">{selectedService.price_taylor}</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-600">Shantel</p>
-                          <p className="font-medium">{selectedService.price_shantel}</p>
-                        </div>
-                      </div>
-                      {selectedService.price_taylor.includes('+') || selectedService.price_shantel.includes('+') ? (
-                        <p className="text-xs text-gray-600 mt-2">+ indicates starting price. Final price depends on hair length, density, and condition.</p>
-                      ) : null}
-                    </div>
                     
                     {selectedService.details.includes && (
                       <div className="bg-rose-50 p-4 rounded-lg">
