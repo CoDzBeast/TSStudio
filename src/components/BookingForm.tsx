@@ -6,11 +6,11 @@ const BookingForm: React.FC = () => {
     owner: {
       'new-client': {
         formId: '252445285616057',
-        apiKey: import.meta.env.VITE_JOTFORM_OWNER_API_KEY || 'YOUR_OWNER_API_KEY'
+        apiKey: 'b4e8860fbb4274019d25438a0e8da8a8'
       },
       'color-consultation': {
         formId: '252445322843051',
-        apiKey: import.meta.env.VITE_JOTFORM_OWNER_API_KEY || 'YOUR_OWNER_API_KEY'
+        apiKey: 'b4e8860fbb4274019d25438a0e8da8a8'
       }
     },
     coworker: {
