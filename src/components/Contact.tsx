@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from 'lucide-react';
-import BookingForm from './BookingForm';
+import BookingFlow from './BookingForm/BookingFlow';
 
 const Contact: React.FC = () => {
   return (
@@ -16,8 +16,8 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Booking Form Component - Removed the extra rounded box container */}
-          <BookingForm />
+          {/* Booking Flow Component */}
+          <BookingFlow />
           
           {/* Map and Contact Information */}
           <div className="bg-white rounded-2xl p-8 shadow-lg">
