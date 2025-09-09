@@ -365,8 +365,11 @@ const BookingForm: React.FC = () => {
       }
       
       // Submit form data to JotForm API
-      const response = await fetch(`https://api.jotform.com/form/${config.formId}/submissions?apiKey=${config.apiKey}`, {
+      const response = await fetch(`https://api.jotform.com/form/${config.formId}/submissions`, {
         method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${config.apiKey}`
+        },
         body: submissionData,
       });
       
