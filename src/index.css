@@ -25,10 +25,29 @@
   }
 }
 
+@keyframes dotPulse {
+  0% {
+    transform: scale(1);
+    background-color: #C4A29B;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #B89189;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #C4A29B;
+  }
+}
+
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out forwards;
 }
 
 .animate-slideIn {
   animation: slideIn 0.3s ease-out forwards;
+}
+
+.animate-dot-pulse {
+  animation: dotPulse 2s infinite ease-in-out;
 }
