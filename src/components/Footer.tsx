@@ -84,10 +84,10 @@ const Footer: React.FC = () => {
               © 2024 T & S Studio - Premier Women-Owned Hair Salon in Rocklin, CA. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/TSStudio/#" className="text-gray-500 hover:text-rose-400 text-sm transition-colors duration-300">
+              <a href="#" className="text-gray-500 hover:text-rose-400 text-sm transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="/TSStudio/#" className="text-gray-500 hover:text-rose-400 text-sm transition-colors duration-300">
+              <a href="#" className="text-gray-500 hover:text-rose-400 text-sm transition-colors duration-300">
                 Terms of Service
               </a>
             </div>

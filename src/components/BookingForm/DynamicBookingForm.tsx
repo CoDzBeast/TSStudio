@@ -175,13 +175,12 @@ async function submitToJotform({
     
     console.log(`[DEBUG] Form data prepared for submission`);
     
-    const response = await fetch(
-      `https://api.jotform.com/form/${formId}/submissions?apiKey=${apiKey}`,
-      {
-        method: 'POST',
-        body: formData
-      }
-    );
+    // Use the public submit endpoint instead of the API endpoint
+    // to avoid CORS issues with Authorization headers when deployed to GitHub Pages
+    const response = await fetch(`https://submit.jotform.com/submit/${formId}`, {
+      method: 'POST',
+      body: formData,
+    });
     
     console.log(`[DEBUG] Submission response status: ${response.status}`);
     
@@ -566,7 +565,7 @@ const BookingForm: React.FC<{
       const config = getConfig();
       await submitToJotform({
         formId: config.formId,
-        apiKey: config.apiKey,
+        apiKey: '', // Not used in public submission endpoint
         fields,
         answers: formData
       });
