@@ -364,12 +364,11 @@ const BookingForm: React.FC = () => {
         }
       }
       
-      // Submit form data to JotForm API
-      const response = await fetch(`https://api.jotform.com/form/${config.formId}/submissions`, {
+      // Submit form data to JotForm using the public submission endpoint
+      // IMPORTANT: Using the public submit endpoint instead of the API endpoint
+      // to avoid CORS issues with Authorization headers when deployed to GitHub Pages
+      const response = await fetch(`https://submit.jotform.com/submit/${config.formId}`, {
         method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${config.apiKey}`
-        },
         body: submissionData,
       });
       
@@ -445,7 +444,10 @@ const BookingForm: React.FC = () => {
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      if (error instanceof Error) {
+      // Check if this is a CORS error
+      if (error instanceof TypeError && error.message.includes('fetch')) {
+        showErrorMessage('Network error. Please check your internet connection and try again.');
+      } else if (error instanceof Error) {
         showErrorMessage(error.message || 'Failed to submit form. Please try again.');
       } else {
         showErrorMessage('Failed to submit form. Please try again.');
