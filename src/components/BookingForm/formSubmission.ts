@@ -193,7 +193,17 @@ export const submitBookingForm = async (
     });
     
     if (response.ok) {
-      return true;
+      // Check if response is actually JSON before trying to parse it
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        const result = await response.json();
+        console.log('[DEBUG] Form submitted successfully:', result);
+        return true;
+      } else {
+        // If not JSON, it's likely a successful redirect or HTML response
+        console.log('[DEBUG] Form submitted successfully (non-JSON response)');
+        return true;
+      }
     } else {
       let errorMessage = `Failed to submit form. Status: ${response.status}`;
       if (response.statusText) {
@@ -202,12 +212,22 @@ export const submitBookingForm = async (
       
       // Try to get more detailed error information from the response
       try {
-        const errorText = await response.text();
-        if (errorText) {
-          errorMessage += ` - Details: ${errorText}`;
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+          const errorData = await response.json();
+          if (errorData.message) {
+            errorMessage += ` - Details: ${errorData.message}`;
+          }
+        } else {
+          // If it's not JSON, just read as text
+          const errorText = await response.text();
+          if (errorText) {
+            errorMessage += ` - Details: ${errorText.substring(0, 200)}...`; // Limit length
+          }
         }
-      } catch {
+      } catch (parseError) {
         // If we can't read the error details, that's okay
+        errorMessage += ' - Could not parse error details';
       }
       
       throw new Error(errorMessage);

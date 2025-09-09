@@ -185,14 +185,35 @@ async function submitToJotform({
     console.log(`[DEBUG] Submission response status: ${response.status}`);
     
     if (!response.ok) {
-      const errorText = await response.text();
+      let errorText = '';
+      try {
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+          const errorData = await response.json();
+          errorText = errorData.message || JSON.stringify(errorData);
+        } else {
+          const text = await response.text();
+          errorText = text.substring(0, 200); // Limit length
+        }
+      } catch (parseError) {
+        errorText = 'Could not parse error details';
+      }
+      
       console.error(`[ERROR] Submission failed: ${response.status} ${response.statusText}`, errorText);
-      throw new Error(`Submission failed: ${response.status} ${response.statusText}`);
+      throw new Error(`Submission failed: ${response.status} ${response.statusText} - ${errorText}`);
     }
     
-    const result = await response.json();
-    console.log(`[DEBUG] Form submitted successfully:`, result);
-    return result;
+    // Check if response is actually JSON before trying to parse it
+    const contentType = response.headers.get('content-type');
+    if (contentType && contentType.includes('application/json')) {
+      const result = await response.json();
+      console.log(`[DEBUG] Form submitted successfully:`, result);
+      return result;
+    } else {
+      // If not JSON, it's likely a successful redirect or HTML response
+      console.log(`[DEBUG] Form submitted successfully (non-JSON response)`);
+      return { success: true };
+    }
   } catch (error) {
     console.error('[ERROR] Error submitting form:', error);
     throw error;
